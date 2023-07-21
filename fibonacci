@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body style="background-color: rgb(204, 221, 211)">
+    <h1 style="text-align: center">Honeydew</h1>
+    <script>
+      function fibonacciGenerator(n) {
+        for (let number = [0]; number.length <= n; number = number) {
+          if (n === 1) {
+            return number;
+          }
+          if (number.length === 1) {
+            number.push(1);
+          } else {
+            number.push(number[number.length - 2] + number[number.length - 1]);
+          }
+          if (number.length === n) {
+            return number;
+          }
+        }
+      }
+      let output = fibonacciGenerator(6);
+      console.log(output);
+    </script>
+  </body>
+</html>
